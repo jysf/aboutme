@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="Jason Yashinsky">
+  <meta charset="utf-8">
+  <title>Jason's Resume</title>
+</head>
+  
+<body>
+  <p id="test"></p>
+<script id="resume1-javascript">
+
+/* Creating a JSON object with JSON data*/
+var res_info =   '{
+  "personal" : { "firstName":"Jason", "lastName":"Yashinsky", "email":"jyashinsky@gmail.com","city":"San Francisco", "state":"CA","zip":"94110"}, 
+}';
+
+  
+
+/* Parsing the JSON data*/
+var text = JSON.parse(res_info);
+
+/* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+document.getElementById("test").innerHTML = text.personal.firstName +   " " + text.personal.lastName  +  "<br>" + text.personal.email + "<br>" + text.personal.city;
+</script>
+
+  </body>
+</html>
